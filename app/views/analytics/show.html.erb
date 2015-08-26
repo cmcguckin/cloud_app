@@ -1,0 +1,29 @@
+<div class="page-header">
+  <h1> Employee Analytics <small><a href="/profiles">All Profiles</a></small></h1>
+</div>
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+   <div class="panel-heading"> The charts below show the number of employees by role, and the number of employees by manager. </div>
+
+  <%= javascript_include_tag "http://www.google.com/jsapi", "chartkick" %>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <%= yield %>
+  </div
+
+  <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+<div class="row">
+  <div class="col-xs-12">
+    <h3>Total Employees by role</h3>
+	<%= pie_chart Profile.group(:role).count %>
+<div class="row">
+  <!-- Column Chart --> 
+  <div class="col-xs-12">
+    <h3>Total Employees by Manager</h3>
+    <%= column_chart Profile.group(:manager).count %>
+</div>
+</body>
+</html>

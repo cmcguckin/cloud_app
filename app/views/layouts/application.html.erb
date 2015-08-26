@@ -2,11 +2,31 @@
 <html>
 <head>
   <title>CloudApp</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<p>x14127695</p>
+<% if user_signed_in? %>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+        <li><a href="/#">Home<span class="sr-only">(current)</span></a></li>
+      </ul>
+    </div>
+      <ul class="nav navbar-nav navbar-right">
+        <%= form_tag(profiles_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search..." %>
+        <%= submit_tag "Search" %>
+        <% end %> 
+        <% end %>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
 <%= yield %>
 

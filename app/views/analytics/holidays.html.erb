@@ -1,0 +1,26 @@
+<div class="page-header">
+  <h1> Holidays <small> All Employees </small></h1>
+</div>
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+   <div class="panel-heading"> The chart below shows how many employees are on holiday, by day </div>
+
+  <%= javascript_include_tag "http://www.google.com/jsapi", "chartkick" %>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <%= yield %>
+  </div
+
+  <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+
+<div class="row">
+  <!-- Column Chart --> 
+  <div class="col-xs-12">
+    <h3>Total Holidays by Day</h3>
+    <%= column_chart Holiday.group(:start_date).count %>
+</div>
+</body>
+</html>

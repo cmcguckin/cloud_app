@@ -1,0 +1,125 @@
+.title{
+    width:548px;
+    height:119px;
+    position:absolute;
+    top:400px;
+    left:150px;
+    background:transparent url(../assets/title.png) no-repeat top left;
+}
+/*a.back{
+    background:transparent url(assets/back.png) no-repeat top left;
+    position:fixed;
+    width:150px;
+    height:27px;
+    outline:none;
+    bottom:0px;
+    left:0px;
+ }*/
+table{
+    margin: 40px auto;
+    font-family: "Trebuchet MS", sans-serif;
+    font-style: normal;
+}
+thead{
+    margin: 2px auto;
+    padding: 5px;
+    left: 5px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: bold;
+}
+td{
+    margin: 20px auto;
+    padding: 15px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+}
+s.navigation{
+    margin: 20px auto;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+}
+.navigation .item{
+    position:absolute;
+}
+a.icon{
+    width:52px;
+    height:52px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    cursor:pointer;
+}
+.user a.icon{
+    background:transparent url(../assets/user.png) no-repeat 0px 0px;
+}
+.home a.icon{
+    background:transparent url(../assets/home.png) no-repeat 0px 0px;
+}
+.shop a.icon{
+    background:transparent url(../assets/user.png) no-repeat 0px 0px;
+}
+.camera a.icon{
+    background:transparent url(../assets/camera.png) no-repeat 0px 0px;
+}
+.fav a.icon{
+    background:transparent url(../assets/fav.png) no-repeat 0px 0px;
+}
+.navigation .item a.active{
+    background-position:0px -52px;
+}
+.item img.circle{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:52px;
+    height:52px;
+    opacity:0.1;
+}
+.item h2{
+    position:absolute;
+    width:147px;
+    height:52px;
+    color:#222;
+    font-size:17px;
+    top:0px;
+    left:52px;
+    text-indent:10px;
+    line-height:52px;
+    text-shadow:1px 1px 1px #fff;
+}
+.item h2.active{
+    color:#fff;
+    text-shadow:1px 0px 1px #555;
+}
+.item ul{
+    list-style:none;
+    position:absolute;
+    top:60px;
+    left:25px;
+    display:none;
+}
+.item ul li a{
+    font-size:15px;
+    text-decoration:none;
+    letter-spacing:1.5px;
+    color:#fff;
+    padding:3px;
+    float:left;
+    clear:both;
+    width:100px;
+    text-shadow:1px 0px 1px #fff;
+}
+footer{
+   font-family:Gill Sans;
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height: 45px;   /* Height of the footer */
+   left:15px;
+}

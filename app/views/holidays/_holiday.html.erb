@@ -1,0 +1,18 @@
+
+<p>
+  <strong>From:</strong>
+  <%= holiday.start_date %>
+</p>
+<p>
+  <strong>To:</strong>
+  <%= holiday.end_date %>
+</p>
+<p>
+  <strong>Comment:</strong>
+  <%= holiday.comment %>
+</p>
+<p>
+<%= link_to 'Delete Request', [holiday.profile, holiday],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

@@ -1,0 +1,46 @@
+<div class="page-header">
+  <h1> <%= @profiles.first_name %> <%= @profiles.surname %> <small> <%= @profiles.role %></small></h1>
+</div>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">
+  About <%= @profiles.first_name %> 
+  </div>
+  <div class="panel-body">
+  <p>  Please see the holidays <%= @profiles.first_name %> has requested below. For more information about <%= @profiles.first_name %>, please contact <%= @profiles.manager %>. 
+  </p>
+<p>
+  <strong>Manager:</strong>
+  <%= @profiles.manager %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @profiles.role %>
+</p>
+<p>
+  <strong>Start Date:</strong>
+  <%= @profiles.start_date %>
+</p>
+<p>
+  <strong>End Date:</strong>
+  <%= @profiles.end_date %>
+</p>
+<p>
+  <strong>Holiday Allowance:</strong>
+  <%= @profiles.holiday_allowance %>
+</p> 
+
+<%= link_to 'Edit', edit_profile_path(@profiles) %> |
+<%= link_to 'All Profiles', profiles_path %>
+</div>
+
+<div class="panel-heading"> Holidays Requested </div>
+<div class="panel-body">
+  <%= render @profiles.holidays %>
+</div>
+
+<div class="panel-heading"> Request a holiday </div>
+<div class="panel-body">
+<%= render 'holidays/form' %>
+</div>

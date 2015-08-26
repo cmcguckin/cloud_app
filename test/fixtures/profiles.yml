@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  surname: MyString
+  gender: false
+  manager: MyString
+  role: MyString
+  start_date: 2015-08-23
+  end_date: 2015-08-23
+  holiday_allowance: 1
+
+two:
+  first_name: MyString
+  surname: MyString
+  gender: false
+  manager: MyString
+  role: MyString
+  start_date: 2015-08-23
+  end_date: 2015-08-23
+  holiday_allowance: 1

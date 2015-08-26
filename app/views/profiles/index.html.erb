@@ -1,0 +1,38 @@
+<div class="page-header">
+  <h1> All Profiles <small> <%= link_to(image_tag("plus_sign.png", size: "15x15"), new_profile_path) %> new profile </small></h1>
+</div>
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+   <div class="panel-heading">All Employees are listed below. Please click view for more information, edit to update or delete to destroy the record. Please note deleted records cannot be returned.</div>
+
+ <!-- Table -->
+<table class="table">
+    <th>First Name</th>
+    <th>Surname</th>
+    <th>Manager</th>
+    <th>Role</th>
+    <th>View</th>
+    <th>Edit</th>
+    <th>Delete</th>
+
+    <% @profiles.each do |profile| %>
+     <tr>
+      <td><%= profile.first_name %></td>
+      <td><%= profile.surname %></td>
+      <td><%= profile.manager %></td>
+      <td><%= profile.role %></td>
+      <td><%= link_to 'View', profile_path(profile) %></td>
+      <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
+      <td><%= link_to 'Delete', profile_path(profile),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+   <% end %>
+</table>
+
+
+
+
+
+
