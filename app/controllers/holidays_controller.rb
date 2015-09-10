@@ -1,6 +1,4 @@
 class HolidaysController < ApplicationController
-    
-  http_basic_authenticate_with name: "dhh", password: "secret", only: :destroy
 
   def create
     @profile = Profile.find(params[:profile_id])

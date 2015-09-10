@@ -24,6 +24,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 
+gem 'jira-ruby', :require => 'jira'
+
 gem 'cancancan', '~> 1.10'
 
 gem 'simple_form'

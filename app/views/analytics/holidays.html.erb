@@ -19,8 +19,8 @@
 <div class="row">
   <!-- Column Chart --> 
   <div class="col-xs-12">
-    <h3>Total Holidays by Day</h3>
-    <%= column_chart Holiday.group(:start_date).count %>
+    <h3>Total Holidays by Month</h3>
+    <%= column_chart Holiday.group_by_month(:start_date).count %>
 </div>
 </body>
 </html>
