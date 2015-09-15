@@ -8,10 +8,12 @@
 html {
   font-family: Gill Sans;
   -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+      -ms-text
+      -size-adjust: 100%;
 }
 body {
-  margin: 25px;
+  margin: 5px;
+  margin-top: 20px;
   background:#fff url(../assets/bg.png) no-repeat top left;
 }
 article,
@@ -20,12 +22,16 @@ details,
 figcaption,
 figure,
 footer,
+{
+padding: 2px 2px 2px 2px;
+}
 header,
 hgroup,
 main,
 menu,
 nav {
  margin-top: 0px;
+ margin-bottom: 50px;
  width: 100%;
 }
 section,
@@ -65,7 +71,7 @@ dfn {
   font-style: italic;
 }
 h1 {
-  margin: .67em 0;
+  margin: 20px 0;
   font-size: 2em;
 }
 mark {
@@ -1418,7 +1424,8 @@ a.bg-danger:focus {
 }
 .page-header {
   padding-bottom: 9px;
-  margin: 40px 0 20px;
+  padding-left: 10px;
+  margin: 40px 20px 20px 20px;
   border-bottom: 1px solid #eee;
 }
 ul,
@@ -5515,7 +5522,8 @@ button.list-group-item-danger.active:focus {
           box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
 }
 .panel-body {
-  padding: 25px;
+  padding: 5px;
+  : 5px;
 }
 .panel-heading {
   padding: 10px 15px;
@@ -5540,7 +5548,7 @@ button.list-group-item-danger.active:focus {
   color: inherit;
 }
 .panel-footer {
-  padding: 10px 15px;
+  padding: 2px 2px;
   background-color: #f5f5f5;
   border-top: 1px solid #ddd;
   border-bottom-right-radius: 3px;
@@ -5743,6 +5751,7 @@ button.list-group-item-danger.active:focus {
 }
 .panel-default {
   border-color: #ddd;
+  radius: #ddd;
 }
 .panel-default > .panel-heading {
   color: #333;

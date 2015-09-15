@@ -1,9 +1,9 @@
 .title{
     width:548px;
-    height:119px;
+    height:160px;
     position:absolute;
     top:400px;
-    left:150px;
+    left:50px;
     background:transparent url(../assets/title.png) no-repeat top left;
 }
 /*a.back{
@@ -58,11 +58,14 @@ a.icon{
 .user a.icon{
     background:transparent url(../assets/user.png) no-repeat 0px 0px;
 }
+.user2 a.icon{
+    background:transparent url(../assets/user.png) no-repeat 0px 0px;
+}
 .home a.icon{
     background:transparent url(../assets/home.png) no-repeat 0px 0px;
 }
 .shop a.icon{
-    background:transparent url(../assets/user.png) no-repeat 0px 0px;
+    background:transparent url(../assets/shop.png) no-repeat 0px 0px;
 }
 .camera a.icon{
     background:transparent url(../assets/camera.png) no-repeat 0px 0px;

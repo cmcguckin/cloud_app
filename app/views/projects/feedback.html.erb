@@ -1,0 +1,28 @@
+<div class="page-header">
+  <h1>All Projects <small> All active requests, ideas and projects in execution are included in the list below </small></h1>
+</div>
+<div class="panel panel-default">
+<!-- Default panel contents -->
+ <!-- Table -->
+<table class="table">
+    <th>Project</th>
+    <th>Satisfaction</th>
+    <th>Feedback</th>
+    <th>Next Sprint</th>
+    <th>Add Feedback</th>
+    
+    <% @project.each do |project| %>
+     <tr>
+      <td><%= project.name %></td>
+      <td><%= project.satisfaction %></td>
+      <td><%= project.sprint_feedback %></td>
+      <td><%= project.next_sprint %></td>
+      <td><%= link_to 'Add', project_path(project) %></td>
+      </tr>
+   <% end %>
+   <br></br>
+   <%= link_to 'New project', new_project_path %>
+ </div>
+</table>
+</div>
+</div>

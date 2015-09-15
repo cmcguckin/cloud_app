@@ -1,0 +1,29 @@
+<%= form_for([@projects, @projects.issues.build]) do |f| %>
+ <div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-body">
+  </div>
+  <table class="table">
+    <td>
+  <form class="form-horizontal">
+    <div class="form-group">
+    <label for="from">On a scale of 1 - 10 (1 = low, 10 = high), how satisfied were you with the sprint deliverable?</label>
+    <input type="integer" class="form-control" id="exampleInputEmail1" placeholder="Enter a number" 
+    <%= f.text_field :sprint %>
+    </div>
+  <div class="form-group">
+    <label for="from">What part of the deliverable are you happy with? What would you change?</label>
+    <input type="comment" class="form-control" id="exampleInputEmail1" placeholder="Enter a few short sentences" 
+    <%= f.text_field :issue_description %>
+  </div>
+</div>
+    <div class="form-group">
+    <label for="from">What functionality would you next to see in the next sprint?</label>
+    <input type="comment" class="form-control" id="exampleInputEmail1" placeholder="Enter the goal for the next sprint" <%= f.text_field :sprint_goal %>
+  </td>
+  </div>
+  </div>
+  <%= f.submit %>
+</form>
+</div>
+<% end %>

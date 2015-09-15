@@ -1,14 +1,24 @@
 Rails.application.routes.draw do
   get 'analytics/show'
   get 'analytics/holidays'
+  get 'analytics/projects'
+  get 'projects/search'
+  get 'projects/summary'
+  get 'projects/feedback'
 
   devise_for :users
     resources :profiles
     resources :holidays
+    resources :projects
     root 'welcome#index'
   
     resources :profiles do
       resources :holidays
+    end
+    
+    resources :projects do
+      resources :profiles
+      resources :issues
     end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

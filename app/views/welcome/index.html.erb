@@ -2,17 +2,17 @@
 <!--This is the landing page with the circluar view-->
 <html>
     <head>
-        <title>HR @ TheGlobe Inc.</title>
+        <title>Magile @ TheGlobe Inc.</title>
         <link rel="stylesheet" href="assets/style.css" type="text/css" media="screen"/>
+        <%= csrf_meta_tags %>
     </head>
     <body>
        <div id="content">
-            <!--<a class="back" href="http://tympanus.net/codrops/2010/04/29/awesome-bubble-navigation-with-jquery"></a>-->
             <div class="title"></div>
             <p class="notice"><%= flash[:notice] %></p>
             <div class="navigation" id="nav">
-                <div class="item home">
-                    <img src="assets/bg_user.png" alt="" width="199" height="199" class="circle"/>
+                <div class="item user2">
+                    <img src="assets/bg_user.png" alt="Test" width="199" height="199" class="circle"/>
                     <a href="#" class="icon"></a>
                     <h2>User</h2>
                     <ul>
@@ -20,22 +20,40 @@
                         <%= render 'devise/menu/login_items' %>
                     </ul>
                 </div>
-                <div class="item shop">
-                    <img src="assets/bg_home.png" alt="" width="199" height="199" class="circle"/>
+                <div class="item home">
+                    <img src="assets/bg_home.png" alt="Test" width="199" height="199" class="circle"/>
                     <a href="#" class="icon"></a>
-                    <h2>Profiles</h2>
+                    <h2>Projects</h2>
                     <ul>
-                        <li><a href="/profiles">All</a></li>
-                        <li><%= link_to 'New', new_profile_path %></li>
+                        <li><a href="/projects/summary">All</a></li>
+                        <li><%= link_to 'New', new_project_path %></li>
+                    </ul>
+                </div>
+                <div class="item shop">
+                    <img src="assets/bg_shop.png" alt="" width="199" height="199" class="circle"/>
+                    <a href="#" class="icon"></a>
+                    <h2>Request</h2>
+                    <ul>
+                        <li><a href="/projects/new">Add request</a></li>
+                    </ul>
+                    </ul>
+                </div>
+                <div class="item fav">
+                    <img src="assets/bg_fav.png" alt="" width="199" height="199" class="circle"/>
+                    <a href="#" class="icon"></a>
+                    <h2>Feedback</h2>
+                    <ul>
+                        <li><a href="/projects/search">Search</a></li>
+                    </ul>
                     </ul>
                 </div>
                 <div class="item camera">
-                    <img src="assets/bg_camera.png" alt="" width="199" height="199" class="circle"/>
+                    <img src="assets/camera.png" alt="" width="199" height="199" class="circle"/>
                     <a href="#" class="icon"></a>
-                    <h2>Analytics</h2>
+                    <h2>Update</h2>
                     <ul>
-                        <li><a href="/analytics/show">Employee</a></li>
-                        <li><a href="/analytics/holidays">Holiday</a></li>
+                        <li><a href="/projects">All</a></li>
+                        <li><a href="/projects/new">Request</a></li>
                     </ul>
                     </ul>
                 </div>
@@ -76,7 +94,4 @@
             });
         </script>
     </body>
-    <footer>
-       &copy; The Globe Inc.&trade; 2015
-    </footer>
 </html>

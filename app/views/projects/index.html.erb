@@ -1,0 +1,37 @@
+
+<div class="page-header">
+  <h1>Projects <small> All active requests, ideas and projects in execution are included in the list below </small></h1>
+</div>
+<div class="panel panel-default">
+<!-- Default panel contents -->
+ <!-- Table -->
+<table class="table">
+    <th>Platform</th>
+    <th>Project</th>
+    <th>Executive Sponsor</th>
+    <th>Product Owner</th>
+    <th>Scrum Master</th>
+    <th>View</th>
+    <th>Edit</th>
+    <th>Delete</th>
+    
+    <% @project.each do |project| %>
+     <tr>
+      <td><%= project.platform %></td>
+      <td><%= project.name %></td>
+      <td><%= project.executive_sponsor %></td>
+      <td><%= project.product_owner %></td>
+      <td><%= project.scrum_master %></td>
+      <td><%= link_to 'View', project_path(project) %></td>
+      <td><%= link_to 'Edit', edit_project_path(project) %></td>
+      <td><%= link_to 'Delete', project_path(project),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+   <% end %>
+   <br></br>
+   <%= link_to 'New project', new_project_path %>
+ </div>
+</table>
+</div>
+</div>

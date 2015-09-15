@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  key: 1
+  name: MyString
+  description: MyText
+  objectives: MyText
+  benefits: MyText
+  data_required: MyText
+  legal_compliance: MyText
+  platform: MyString
+  executive_sponsor: MyString
+  scrum_master: MyString
+  product_owner: MyString
+
+two:
+  key: 1
+  name: MyString
+  description: MyText
+  objectives: MyText
+  benefits: MyText
+  data_required: MyText
+  legal_compliance: MyText
+  platform: MyString
+  executive_sponsor: MyString
+  scrum_master: MyString
+  product_owner: MyString

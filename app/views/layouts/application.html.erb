@@ -8,7 +8,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<p>x14127695</p>
 <% if user_signed_in? %>
 <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -18,7 +17,7 @@
       </ul>
     </div>
       <ul class="nav navbar-nav navbar-right">
-        <%= form_tag(profiles_path, :method => "get", id: "search-form") do %>
+        <%= form_tag(projects_path, :method => "get", id: "search-form") do %>
         <%= text_field_tag :search, params[:search], placeholder: "Search..." %>
         <%= submit_tag "Search" %>
         <% end %> 

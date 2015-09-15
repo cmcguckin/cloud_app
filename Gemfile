@@ -36,6 +36,7 @@ gem 'groupdate', '~> 2.1.1'
 gem 'active_median', '~> 0.1.0'
 
 gem 'rails_12factor', group: :production
+gem 'haml-rails', '~> 0.9.0'
 
 ruby "2.2.1"
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150823153058) do
+ActiveRecord::Schema.define(version: 20150914212130) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,30 @@ ActiveRecord::Schema.define(version: 20150823153058) do
 
   add_index "holidays", ["profile_id"], name: "index_holidays_on_profile_id", using: :btree
 
+  create_table "issues", force: :cascade do |t|
+    t.string   "issue_type"
+    t.string   "issue_name"
+    t.string   "issue_description"
+    t.integer  "sprint"
+    t.string   "sprint_goal"
+    t.integer  "estimated_time"
+    t.date     "estimated_completion"
+    t.integer  "actual_time"
+    t.date     "actual_completion"
+    t.integer  "story_points"
+    t.string   "assigned_to"
+    t.string   "issue_status"
+    t.integer  "release"
+    t.date     "release_date"
+    t.integer  "project_id"
+    t.integer  "profile_id"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "issues", ["profile_id"], name: "index_issues_on_profile_id", using: :btree
+  add_index "issues", ["project_id"], name: "index_issues_on_project_id", using: :btree
+
   create_table "profiles", force: :cascade do |t|
     t.string   "first_name"
     t.string   "surname"
@@ -38,6 +62,25 @@ ActiveRecord::Schema.define(version: 20150823153058) do
     t.integer  "holiday_allowance"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.integer  "key"
+    t.string   "name"
+    t.text     "description"
+    t.text     "objectives"
+    t.text     "benefits"
+    t.text     "data_required"
+    t.text     "legal_compliance"
+    t.string   "platform"
+    t.string   "executive_sponsor"
+    t.string   "scrum_master"
+    t.string   "product_owner"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "satisfaction"
+    t.string   "sprint_feedback"
+    t.string   "next_sprint"
   end
 
   create_table "users", force: :cascade do |t|
@@ -59,4 +102,6 @@ ActiveRecord::Schema.define(version: 20150823153058) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "holidays", "profiles"
+  add_foreign_key "issues", "profiles"
+  add_foreign_key "issues", "projects"
 end

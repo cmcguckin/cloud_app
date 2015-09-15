@@ -2,12 +2,12 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
 
-<div id='login'>  
-Log in
+<div id='login'> 
+Login      
 </div>
-<span></span>
+<span>
+</span>
 <div id='container2'>
-
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <form role="form">
   <div class="form-group">
@@ -30,5 +30,5 @@ Log in
 <% end %>
 <%= render "devise/shared/links" %>
 
-</div>
 </form>
+</div>

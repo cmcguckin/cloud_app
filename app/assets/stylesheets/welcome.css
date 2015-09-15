@@ -2,22 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .user{
-    top:200px;
-    left:180px;
+    top:250px;
+    left:270px;
 }
 .home{
-   top:200px;
-   left:150px;
+   top:210px;
+   left:390px;
 }
 .shop{
-   top:130px;
-   left:450px;
+   top:300px;
+   left:560px;
 }
 .camera{
-   top:280px;
-   left:760px;
+   top:360px;
+   left:724px;
 }
 .fav{
-   top:200px;
-   left:950px;
+   top:390px;
+   left:880px;
+}
+.user2{
+    top:110px;
+    left:270px;
 }

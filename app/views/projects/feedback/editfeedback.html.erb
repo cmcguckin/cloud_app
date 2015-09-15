@@ -1,0 +1,52 @@
+<%= form_for(project, url: feedback_path) do |f| %>
+
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@project.errors.count, "error") %> prohibited
+        this project from being saved:
+      </h2>
+      <ul>
+        <% @project.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-body">
+  </div>
+  <table class="table">
+    <td>
+  <form class="form-horizontal">
+  <div class="form-group">
+    <label for="from">Project Title</label>
+    <input type="comment" class="form-control" id="exampleInputEmail1" placeholder="A short title for the project" 
+    <%= f.text_field :name %>
+  </div>
+    <div class="form-group">
+    <label for="from">On a scale of 1 - 10 (1 = low, 10 = high), how satisfied were you with the sprint deliverable?</label>
+    <input type="comment" class="form-control" id="exampleInputEmail1" placeholder="Description" 
+    <%= f.text_field :satisfaction %>
+  </div>
+  <div class="form-group">
+    <label for="from">What part of the deliverable are you happy with? What would you change?</label>
+    <input type="comment" class="form-control" id="exampleInputEmail1" placeholder="Objectives" 
+    <%= f.text_field :sprint_feedback %>
+  </div>
+</div>
+    <div class="form-group">
+    <label for="from">What functionality would you next to see in the next sprint?</label>
+    <input type="comment" class="form-control" id="exampleInputEmail1" placeholder="Benefits associated with the project" <%= f.text_field :next_sprint %>
+  </td>
+  <td>
+  </div>
+  </div>
+  <button class="btn btn-default"><%= f.submit %></button>
+</form>
+</td>
+</div>
+<%= link_to 'Back', projects_path %>
+<% end %>

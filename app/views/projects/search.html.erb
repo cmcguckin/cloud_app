@@ -1,0 +1,24 @@
+ <div class="page-header">
+  <h1>Projects <small> All active requests, ideas and projects in execution are included in the list below </small></h1>
+</div>
+<div class="panel panel-default">
+<!-- Default panel contents -->
+ <div class="panel-heading"> Search the project title to give feedback on the project </div>
+<div class="panel-body">
+  <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+  <%= csrf_meta_tags %>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+ 
+       	<%= form_tag(projects_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search..." %>
+        <%= submit_tag "Search" %>
+        <% end %> 
+ </div>
+</table>
+</div>
+</div>

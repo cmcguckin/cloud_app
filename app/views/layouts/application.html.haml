@@ -1,0 +1,27 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title CloudApp
+    %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}/
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %p x14127695
+    - if user_signed_in?
+      %nav.navbar.navbar-default
+        .container-fluid
+          .navbar-header
+            %ul.nav.navbar-nav
+              %li
+                %a{:href => "/#"}
+                  Home
+                  %span.sr-only (current)
+          %ul.nav.navbar-nav.navbar-right
+            = form_tag(profiles_path, :method => "get", id: "search-form") do
+              = text_field_tag :search, params[:search], placeholder: "Search..."
+              = submit_tag "Search"
+        / /.navbar-collapse
+        / /.container-fluid
+      = yield

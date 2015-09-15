@@ -7,7 +7,7 @@ class HolidaysController < ApplicationController
   end
  
   def show
-  @holiday = Holiday.find(params[:id])
+    @holiday = Holiday.find(params[:id])
   end
 
    def destroy

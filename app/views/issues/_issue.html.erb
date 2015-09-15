@@ -1,0 +1,14 @@
+
+<p>
+  <strong>From:</strong>
+  <%= issue.issue_type %>
+</p>
+<p>
+  <strong>To:</strong>
+  <%= issue.issue_description %>
+</p>
+<p>
+<%= link_to 'Delete Request', [issue.project, issue],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

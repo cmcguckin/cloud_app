@@ -1,0 +1,37 @@
+
+<div class="page-header">
+  <h1> Holidays <small> All Employees </small></h1>
+</div>
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+
+  <%= javascript_include_tag "http://www.google.com/jsapi", "chartkick" %>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <%= yield %>
+  </div
+<table class="table">
+<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+<div class="row">
+  <!-- Column Chart --> 
+  <div class="col-xs-12">
+    <td>
+    <h3>Total Projects by Platform</h3>
+    <p>This chart shows the total number of active projects across each of the platforms in TheGlobe Inc.</p>
+    <%= column_chart Project.group(:platform).count %>
+    </td>
+</div>
+  <div class="col-xs-12">
+    <td>
+    <h3>Total Projects by Platform</h3>
+    <p>This chart shows the total number of active projects across each of the platforms in TheGlobe Inc.</p>
+    <%= column_chart Project.group(:platform).count %>
+    </td>
+</div>
+</table>
+
+</body>
+</html>

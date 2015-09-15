@@ -1,0 +1,75 @@
+<%= form_for @project do |f| %>
+
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@project.errors.count, "error") %> prohibited
+        this project from being saved:
+      </h2>
+      <ul>
+        <% @project.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-body">
+  </div>
+  <table class="table">
+    <td>
+  <form class="form-horizontal">
+  <div class="form-group">
+    <label for="from">Project Title</label>
+    <input type="comment" class="form-control" id="exampleInputEmail1" placeholder="A short title for the project" 
+    <%= f.text_field :name %>
+  </div>
+    <div class="form-group">
+    <label for="from">Description</label>
+    <input type="comment" class="form-control" id="exampleInputEmail1" placeholder="Description" 
+    <%= f.text_field :description %>
+  </div>
+  <div class="form-group">
+    <label for="from">Objectives</label>
+    <input type="comment" class="form-control" id="exampleInputEmail1" placeholder="Objectives" 
+    <%= f.text_field :objectives %>
+  </div>
+</div>
+    <div class="form-group">
+    <label for="from">Benefits</label>
+    <input type="comment" class="form-control" id="exampleInputEmail1" placeholder="Benefits associated with the project" <%= f.text_field :benefits %>
+  </td>
+  <td>
+  </div>
+  <div class="form-group">
+    <label for="from">Data Required</label>
+    <input type="date" class="form-control" id="exampleInputEmail1" placeholder="Data Required to complete the project" <%= f.date_field :data_required %>
+  </div>
+    <div class="form-group">
+    <label for="from">Legal and Compliance Restrictions</label>
+    <input type="comment" class="form-control" id="exampleInputEmail1" placeholder="Holiday Allowance" <%= f.text_field :legal_compliance %>
+  </div>
+</div>
+    <div class="form-group">
+    <label for="from">Executive Sponsor</label>
+    <input type="comment" class="form-control" id="exampleInputEmail1" placeholder="Executive Sponsor" <%= f.text_field :executive_sponsor %>
+  </div>
+</div>
+    <div class="form-group">
+    <label for="from">Platform</label>
+    <input type="comment" class="form-control" id="exampleInputEmail1" placeholder="Executive Sponsor" <%= f.text_field :platform %>
+  </div>
+  <button class="btn btn-default"><%= f.submit %></button>
+</form>
+</td>
+    </div>
+    <div class="form-group">
+    <label for="from">Status update</label>
+    <input type="comment" class="form-control" id="exampleInputEmail1" placeholder="Project Status" <%= f.text_field :next_sprint %>
+  </div>
+  </div>
+</div>
+<%= link_to 'Back', projects_path %>
+<% end %>
